@@ -26,8 +26,9 @@ module ``05: To iterate is human; to recurse, divine`` =
             let v = sq*sq*sq*sq
             let rec inner count =
                 match count = v with
-                | true -> 0
-                | false -> -1 + inner (count+1)
+                | true -> 0 + count
+                | false -> inner (count+1)
             inner sq
 
-        myfun 12 |> should equal
+        myfun 12 |> should equal ((144)*(144)*(144)*(144))
+        //Had help however it Would be great to go through this with a tutor

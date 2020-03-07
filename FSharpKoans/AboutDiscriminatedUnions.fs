@@ -65,7 +65,7 @@ module ``07: The Good Kind of Discrimination`` =
             | BSc (_,Mathematics) | BSc(_,ComputerScience) |  BSc (Mathematics,_) | BSc(ComputerScience,_)  -> "correct" // <-- USE a pattern-match with named fields!
             | _ -> "nope"
         result |> should equal "correct"
-
+        //Would be great to go through this with a tutor
     type EquipmentStatus =
     | Available
     | Broken of daysToRepair:int
@@ -73,9 +73,9 @@ module ``07: The Good Kind of Discrimination`` =
 
     [<Test>]
     let ``05 A discriminated union case with associated data is a function`` () =
-        Broken |> should be ofType<FILL_ME_IN>
-        Rented |> should be ofType<FILL_ME_IN>
-
+        Broken |> should be ofType<int->EquipmentStatus>
+        Rented |> should be ofType<string->EquipmentStatus>
+        //Would be great to go through this with a tutor
     type BinaryTree =
     | Empty
     | Node of string * BinaryTree * BinaryTree
@@ -86,5 +86,15 @@ module ``07: The Good Kind of Discrimination`` =
             match x with
             | Empty -> 0
             | Node (_, a, b) -> 1 + max (depth a) (depth b)
-        let a = __ // <-- you may want to spread this over multiple lines and/or let-bindings ...!
+        let f = Empty
+        let e = Empty
+        let d = Node("Science",e,f)
+        let two = Empty
+        let c = Node("Computer",d,f)
+        let one = Empty
+        let b = Node("Love",c,e)
+        let zero = Empty
+        let a = Node("I",b,d) // <-- you may want to spread this over multiple lines and/or let-bindings ...!
         depth a |> should equal 4
+
+        //I had help here but typed this up myself. //Would be great to go through this with a tutor

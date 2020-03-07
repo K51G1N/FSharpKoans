@@ -388,7 +388,7 @@ module ``03: Putting the Function into Functional Programming`` =
                  f "cow" k + x // <-- multiple words on this line, or you may want to make this a multi-line thing.  You MUST use `f`.
         cows "moo" |> should equal "cow says moo, de gozaru"
         cows "MOOooOO" |> should equal "cow says MOOooOO, de gozaru"
-
+        //Had help Would be great to go through this with a tutor
     [<Test>]
     let ``35 Getting closure`` () =
         let calculate initial final = // note the number of inputs.
@@ -407,7 +407,7 @@ module ``03: Putting the Function into Functional Programming`` =
         g 5 8 |> should equal 12
         g 8 5 |> should equal 5
         // PS. I hope this one brought you some closure.
-
+        //Would be great to go through this with a tutor
     [<Test>]
     let ``37 An operator is just a function in disguise`` () =
         let apply f x =
